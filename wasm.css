@@ -1,0 +1,16 @@
+.emscripten_border{
+    display: none;
+}
+.main-wrapper{
+    /* background-color: aqua; */
+    scroll-behavior: smooth;
+    overflow: auto;
+    height: 50vh;
+}
+#chart{
+    /* background-color: aquamarine; */
+}
+.horizontal-wrapper{
+    display: flex;
+    flex-direction: row;
+}
