@@ -2148,7 +2148,6 @@ function stackCheckInit() {
 
 /** @type {function(Array=)} */
 function run(args) {
-  console.log("VAMOS")
   args = args || arguments_;
 
   if (runDependencies > 0) {
@@ -2165,7 +2164,6 @@ function run(args) {
   }
 
   function doRun() {
-    console.log("YEY")
     // run may have just been called through dependencies being fulfilled just in this very frame,
     // or while the async setStatus time below was happening
     if (calledRun) return;

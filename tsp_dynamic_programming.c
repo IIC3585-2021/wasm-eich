@@ -2,6 +2,8 @@
 // Este problema entrega la solucion minima de pasar por todos los nodos partiendo desde cualquier nodo
 
 #include <stdio.h>
+#include <math.h>
+
 #define INT_MAX 999999
 
 // INPUT
@@ -112,16 +114,14 @@ void tsp(uint32_t mask, uint32_t pos, uint32_t arr[], uint32_t n, uint32_t dist[
 
 uint32_t main_fun(uint32_t n, char distS[])
 {
-	uint32_t dp[8][n][n + 1];
+	int m = pow(2, n);
+
+	uint32_t dp[m][n][n + 1];
 
 	// Se crea array y con funcion convert se le asignan valores
+
 	uint32_t dist[n][n];
 	convert(distS, n, dist);
-
-	for (int i = 0; i < n * n; i++)
-	{
-		printf("array[%d] = %d\n", i, dist[i / n][i % n]);
-	}
 
 	// Inicializar Base de Datos Dinamica
 	for (uint32_t i = 0; i < (1 << n); i++)
