@@ -72,7 +72,7 @@ void tsp(uint32_t mask, uint32_t pos, uint32_t arr[], uint32_t n, uint32_t dist[
 	{
 
 		// Ciudad city no esta visitada
-		if ((mask & (1 << city)) == 0)
+		if ((mask & (1 << city)) == 0 && dist[pos][city] != 0)
 		{
 
 			uint32_t arr2[n + 1];
